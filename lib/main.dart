@@ -4,22 +4,26 @@
 //! Programming with Flexz on Youtube
 
 import 'package:flutter/material.dart';
+import 'package:flutter_hive_tdo/data/models/task.dart';
+import 'package:flutter_hive_tdo/domain/entites/task.entity.dart';
+import 'package:flutter_hive_tdo/presentation/screens/home/home_view.dart';
+import 'package:flutter_hive_tdo/service_locator.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 ///
-import '../data/hive_data_store.dart';
-import '../models/task.dart';
-import '../view/home/home_view.dart';
+import 'data/data_source/_local/hive_data_store.dart';
 
 Future<void> main() async {
   /// Initial Hive DB
   await Hive.initFlutter();
 
   /// Register Hive Adapter
-  Hive.registerAdapter<Task>(TaskAdapter());
+  Hive.registerAdapter<TaskEntity>(TaskAdapter());
 
   /// Open box
-  await Hive.openBox<Task>("tasksBox");
+  await Hive.openBox<TaskEntity>("tasksBox");
+
+  initializeLocatorDependncies(config: AppConfig());
 
   /// Delete data from previous day
   // ignore: avoid_function_literals_in_foreach_calls

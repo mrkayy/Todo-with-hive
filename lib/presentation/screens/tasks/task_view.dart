@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:flutter_hive_tdo/core/utils/colors.dart';
+import 'package:flutter_hive_tdo/core/utils/constanst.dart';
+import 'package:flutter_hive_tdo/core/utils/strings.dart';
+import 'package:flutter_hive_tdo/data/models/task.dart';
 import 'package:intl/intl.dart';
 
 ///
-import '../../main.dart';
-import '../../models/task.dart';
-import '../../utils/colors.dart';
-import '../../utils/constanst.dart';
-import '../../utils/strings.dart';
+import '../../../main.dart';
 
 // ignore: must_be_immutable
 class TaskView extends StatefulWidget {

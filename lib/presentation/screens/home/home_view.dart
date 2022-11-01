@@ -3,18 +3,17 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hive_tdo/core/utils/colors.dart';
+import 'package:flutter_hive_tdo/core/utils/constanst.dart';
+import 'package:flutter_hive_tdo/core/utils/strings.dart';
+import 'package:flutter_hive_tdo/data/models/task.dart';
+import 'package:flutter_hive_tdo/main.dart';
+import 'package:flutter_hive_tdo/presentation/screens/home/widgets/task_widget.dart';
+import 'package:flutter_hive_tdo/presentation/screens/tasks/task_view.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:lottie/lottie.dart';
 // import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 
-///
-import '../../main.dart';
-import '../../models/task.dart';
-import '../../utils/colors.dart';
-import '../../utils/constanst.dart';
-import '../../view/home/widgets/task_widget.dart';
-import '../../view/tasks/task_view.dart';
-import '../../utils/strings.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -167,7 +166,7 @@ class _HomeViewState extends State<HomeView> {
                         ],
                       ),
                       onDismissed: (direction) {
-                        base.dataStore.dalateTask(task: task);
+                        base.dataStore.deleteTask(task: task);
                       },
                       key: Key(task.id),
                       child: TaskWidget(

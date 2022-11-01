@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hive_tdo/core/utils/colors.dart';
+import 'package:flutter_hive_tdo/data/models/task.dart';
+import 'package:flutter_hive_tdo/presentation/screens/tasks/task_view.dart';
 import 'package:intl/intl.dart';
 
 ///
-import '../../../models/task.dart';
-import '../../../utils/colors.dart';
-import '../../../view/tasks/task_view.dart';
 
 class TaskWidget extends StatefulWidget {
   const TaskWidget({Key? key, required this.task}) : super(key: key);

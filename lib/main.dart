@@ -19,15 +19,15 @@ Future<void> main() async {
   Hive.registerAdapter<Task>(TaskAdapter());
 
   /// Open box
-  var box = await Hive.openBox<Task>("tasksBox");
+  await Hive.openBox<Task>("tasksBox");
 
   /// Delete data from previous day
   // ignore: avoid_function_literals_in_foreach_calls
-  box.values.forEach((task) {
-    if (task.createdAtTime.day != DateTime.now().day) {
-      task.delete();
-    } else {}
-  });
+  // box.values.forEach((task) {
+  //   if (task.createdAtTime.day != DateTime.now().day) {
+  //     task.delete();
+  //   } else {}
+  // });
 
   runApp(BaseWidget(child: const MyApp()));
 }
@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Hive Todo App',
+      title: 'Hive Todo App',
       theme: ThemeData(
         textTheme: const TextTheme(
           headline1: TextStyle(

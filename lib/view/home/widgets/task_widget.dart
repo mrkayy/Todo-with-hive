@@ -120,38 +120,39 @@ class _TaskWidgetState extends State<TaskWidget> {
                         : null,
                   ),
                 ),
+                const Divider(
+                  height: 20,
+                  thickness: 1.75,
+                  // indent: 50,
+                  endIndent: 100,
+                ),
 
                 /// Date & Time of Task
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      bottom: 10,
-                      top: 10,
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          DateFormat('hh:mm a')
-                              .format(widget.task.createdAtTime),
-                          style: TextStyle(
-                              fontSize: 14,
-                              color: widget.task.isCompleted
-                                  ? Colors.white
-                                  : Colors.grey),
-                        ),
-                        Text(
-                          DateFormat.yMMMEd()
-                              .format(widget.task.createdAtDate),
-                          style: TextStyle(
-                              fontSize: 12,
-                              color: widget.task.isCompleted
-                                  ? Colors.white
-                                  : Colors.grey),
-                        ),
-                      ],
-                    ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    bottom: 10,
+                    // top: 10,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        DateFormat('hh:mm a').format(widget.task.createdAtTime),
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: widget.task.isCompleted
+                                ? Colors.white
+                                : Colors.grey),
+                      ),
+                      Text(
+                        DateFormat.yMMMEd().format(widget.task.createdAtDate),
+                        style: TextStyle(
+                            fontSize: 12,
+                            color: widget.task.isCompleted
+                                ? Colors.white
+                                : Colors.grey),
+                      ),
+                    ],
                   ),
                 ),
               ],

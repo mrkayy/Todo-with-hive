@@ -142,7 +142,7 @@ class _TaskViewState extends State<TaskView> {
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: const MyAppBar(),
+        // appBar: const MyAppBar(),
         body: SizedBox(
           width: double.infinity,
           height: double.infinity,
@@ -304,7 +304,8 @@ class _TaskViewState extends State<TaskView> {
                 controller: widget.taskControllerForSubtitle,
                 style: const TextStyle(color: Colors.black),
                 decoration: InputDecoration(
-                  prefixIcon: const Icon(Icons.bookmark_border, color: Colors.grey),
+                  prefixIcon:
+                      const Icon(Icons.bookmark_border, color: Colors.grey),
                   border: InputBorder.none,
                   counter: Container(),
                   hintText: MyString.addNote,
@@ -474,40 +475,40 @@ class _TaskViewState extends State<TaskView> {
 }
 
 /// AppBar
-class MyAppBar extends StatelessWidget with PreferredSizeWidget {
-  const MyAppBar({
-    Key? key,
-  }) : super(key: key);
+// class MyAppBar extends StatelessWidget with PreferredSizeWidget {
+//   const MyAppBar({
+//     Key? key,
+//   }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 150,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).pop();
-                },
-                child: const Icon(
-                  Icons.arrow_back_ios_new_rounded,
-                  size: 50,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+//       width: double.infinity,
+//       height: 150,
+//       child: Padding(
+//         padding: const EdgeInsets.only(top: 20),
+//         child: Row(
+//           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//           crossAxisAlignment: CrossAxisAlignment.center,
+//           children: [
+//             Padding(
+//               padding: const EdgeInsets.only(left: 20),
+//               child: GestureDetector(
+//                 onTap: () {
+//                   Navigator.of(context).pop();
+//                 },
+//                 child: const Icon(
+//                   Icons.arrow_back_ios_new_rounded,
+//                   size: 50,
+//                 ),
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
 
-  @override
-  Size get preferredSize => const Size.fromHeight(100);
-}
+//   @override
+//   Size get preferredSize => const Size.fromHeight(100);
+// }

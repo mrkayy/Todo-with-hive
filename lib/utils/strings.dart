@@ -1,5 +1,5 @@
-class MyString {
-  static const String mainTitle = "My Tasks";
+abstract class MyString {
+  static const String mainTitle = "Tasks Todo";
   static const String deletedTask = "This task was deleted";
   static const String doneAllTask = "You Have Done All Tasks!👌";
   static const String addNewTask = "Add New ";

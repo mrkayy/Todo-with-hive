@@ -24,6 +24,7 @@ dependencies:
   lottie: ^1.4.0
   ftoast: ^2.0.0
   flutter_slider_drawer: ^2.1.1
+  flutter_bloc: ^8.1.1
 
 dev_dependencies:
   flutter_test:
@@ -32,6 +33,7 @@ dev_dependencies:
   hive_generator: 1.1.0
 
   flutter_lints: ^2.0.0
+  mockito: ^5.0.15
 
 flutter:
   uses-material-design: true
@@ -39,7 +41,6 @@ flutter:
   assets:
     - assets/img/
     - assets/lottie/
-  
 
   # fonts:
   #   - family: Schyler
